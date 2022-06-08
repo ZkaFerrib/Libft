@@ -1,20 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ft_tolower.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 14:08:01 by gafernan          #+#    #+#             */
-/*   Updated: 2022/03/30 15:27:57 by gafernan         ###   ########.fr       */
+/*   Created: 2022/06/08 12:24:07 by gafernan          #+#    #+#             */
+/*   Updated: 2022/06/08 12:50:03 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h" */
+#include <stdio.h>
+#include <string.h>
 
-int	main(int a)
+char	*ft_strrchr(const char *str, int ch)
 {
-	if (a >= 'A' && a <= 'Z')
-		return (a += 32);
-	return (a);
+	int		x;
+	char	a;
+
+	a = ch;
+	x = 0;
+
+	while (str[x])
+		x++;
+	if (d == 0)
+		return ((char *) &s[x]);
+	x--;
+	while (x >= 0)
+	{
+		if (s[x] == d)
+		{
+			return ((char *) &s[x]);
+		}
+		x--;
+	}
+	return (NULL);
 }

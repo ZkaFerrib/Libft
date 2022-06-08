@@ -5,21 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 13:20:08 by gafernan          #+#    #+#             */
-/*   Updated: 2022/03/30 14:19:16 by gafernan         ###   ########.fr       */
+/*   Created: 2022/05/30 15:31:31 by gafernan          #+#    #+#             */
+/*   Updated: 2022/05/30 15:50:23 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h" */
+/* #include <stdio.h> */
 
-int	main(char *str)
+int	ft_strlen(char *str)
 {
 	int	a;
 
 	a = 0;
 	while (str[a] != '\0')
-	{	
+	{
 		a++;
 	}
 	return (a);
 }
+
+/* int	main(void)
+{
+	char	*src = "bichaco";
+	printf("%d", ft_strlen(src));
+	return (0);
+} */

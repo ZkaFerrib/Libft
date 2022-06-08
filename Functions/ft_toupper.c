@@ -5,16 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 13:28:37 by gafernan          #+#    #+#             */
-/*   Updated: 2022/03/30 14:07:37 by gafernan         ###   ########.fr       */
+/*   Created: 2022/05/30 15:29:10 by gafernan          #+#    #+#             */
+/*   Updated: 2022/05/30 15:30:11 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h" */
+/* #include <stdio.h> */
 
-int	ft_toupper(int c)
-{	
-	if (c <= 'z' && c >= 'a')
+int	ft_tolower(int c)
+{
+	if (c >= 'a' && c <= 'z')
 		return (c -= 32);
 	return (c);
 }
+
+/* int	main(void)
+{
+	int	a;
+
+	a = 'b';
+	printf("%c", ft_tolower(a));
+} */

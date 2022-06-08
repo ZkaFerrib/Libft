@@ -5,25 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 15:29:16 by gafernan          #+#    #+#             */
-/*   Updated: 2022/03/30 15:36:02 by gafernan         ###   ########.fr       */
+/*   Created: 2022/05/30 14:20:02 by gafernan          #+#    #+#             */
+/*   Updated: 2022/05/30 14:27:16 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h" */
+/* #include <stdio.h> */
 
-int	ft_isascii(int a)
+int	ft_isascii(int c)
 {
-	if (a >= 0 && a <= 127)
+	if (c >= 0 && c <= 127)
+	{
 		return (1);
+	}
 	else
 		return (0);
 }
 
-/* int	main (void)
+/* int	main(void)
 {
-	int a;
+	int	a;
 
-	a = 'g';
-	ft_isascii(a);
+	a = ' ';
+	printf ("%d", ft_isascii(a));
 } */

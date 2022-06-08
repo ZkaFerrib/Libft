@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 13:06:19 by gafernan          #+#    #+#             */
-/*   Updated: 2022/05/30 13:26:19 by gafernan         ###   ########.fr       */
+/*   Created: 2022/06/08 12:20:21 by gafernan          #+#    #+#             */
+/*   Updated: 2022/06/08 13:53:31 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h> */
+#include <string.h>
+#include <stdio.h>
 
-int	ft_isalpha(int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	size_t	a;
+	size_t	x;
+
+	a = 0;
+	if (*needle == '\0')
+		return ((char *)haystack);
+	while (haystack[a] != '\0' && a < len)
 	{
-		return (1);
+		x = 0;
+		while (haystack[a + x] == needle[x] && (a + x) < len)
+		{
+			if (needle[x + 1] == 0)
+				return ((char *) & haystack[a]);
+			x++;
+		}
+		a++;
 	}
-	else
-		return (0);
+	return (0);
 }
-
-/* int	main(void)
-{
-	int	a;
-
-	a = 'g';
-	printf("%d",ft_isalpha(a));
-} */

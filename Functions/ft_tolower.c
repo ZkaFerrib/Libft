@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 13:06:19 by gafernan          #+#    #+#             */
-/*   Updated: 2022/05/30 13:26:19 by gafernan         ###   ########.fr       */
+/*   Created: 2022/05/30 15:18:29 by gafernan          #+#    #+#             */
+/*   Updated: 2022/05/30 15:28:09 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* #include <stdio.h> */
 
-int	ft_isalpha(int c)
+int	ft_tolower(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
-		return (1);
-	}
-	else
-		return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c += 32);
+	return (c);
 }
 
 /* int	main(void)
 {
 	int	a;
 
-	a = 'g';
-	printf("%d",ft_isalpha(a));
+	a = 'B';
+	printf("%c", ft_tolower(a));
 } */

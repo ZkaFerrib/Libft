@@ -5,17 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 12:51:44 by gafernan          #+#    #+#             */
-/*   Updated: 2022/03/30 15:28:46 by gafernan         ###   ########.fr       */
+/*   Created: 2022/05/30 13:31:59 by gafernan          #+#    #+#             */
+/*   Updated: 2022/05/30 13:52:42 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include "libft.h" */
+/* #include	<stdio.h> */
 
 int	ft_isdigit(int c)
 {
-	if (c >= "0" && c <= "9")
+	if ((c <= '9' && c >= '0') || (c <= '9' && c >= '0'))
+	{
 		return (1);
+	}
 	else
 		return (0);
 }
+
+/* int	main(void)
+{
+	int	a;
+
+	a = 'g';
+	printf("%d", ft_isdigit(a));
+} */

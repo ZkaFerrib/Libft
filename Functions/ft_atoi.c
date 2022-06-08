@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/30 13:06:19 by gafernan          #+#    #+#             */
-/*   Updated: 2022/05/30 13:26:19 by gafernan         ###   ########.fr       */
+/*   Created: 2022/06/08 13:56:43 by gafernan          #+#    #+#             */
+/*   Updated: 2022/06/08 14:48:18 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h> */
+#include <stdlib.h>
+#include <stdio.h>
 
-int	ft_isalpha(int c)
+int	ft_atoi(const char *str)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	int	sum;
+	int	sign;
+
+	sum = 0;
+	sign = 1;
+	while (*str == ' ' || *str == '\n' || *str == '\t' || \
+			*str == '\r' || *str == '\v' || *str == '\f')
+			str++;
+	if (*str == '-')
+		sign = -1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str >= '0' && *str <= 9)
 	{
-		return (1);
+		sum = sum * 10 + *str - '0';
 	}
-	else
-		return (0);
+	return (sum * sign);
 }
-
-/* int	main(void)
-{
-	int	a;
-
-	a = 'g';
-	printf("%d",ft_isalpha(a));
-} */
