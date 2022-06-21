@@ -6,12 +6,11 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 14:17:02 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/08 14:55:52 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/06/21 19:39:54 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 /* Lo que hacemos es poner todas las condiciones que entren dentro de nuestra limitaciones, es decir,
 en la primera parte lo que estamos haciendo es delimitar que en el caso de que nuestro dstsize sea igual a 0

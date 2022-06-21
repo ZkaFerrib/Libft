@@ -6,13 +6,13 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:29:10 by gafernan          #+#    #+#             */
-/*   Updated: 2022/05/30 15:30:11 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/06/21 19:42:08 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h> */
+#include "libft.h"
 
-int	ft_tolower(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c -= 32);

@@ -6,12 +6,11 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 15:16:20 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/08 15:25:54 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/06/21 19:39:29 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -28,11 +27,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-int main()
+/* int main()
 { 	char array1[] = "Muchachas alegres";
 	char array2[] = "Chos frescos";
 
 	ft_memcpy(array2, array2 + 6, 5 * sizeof(char));
 	printf("%s\n", ft_memcpy(array1, array2 + 6, 6 * sizeof(char)));
 	return(0);
-}
+} */

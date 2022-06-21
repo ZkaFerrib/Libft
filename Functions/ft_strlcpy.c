@@ -6,11 +6,11 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:57:39 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/01 14:14:42 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/06/21 19:41:10 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h> */
+#include "libft.h"
 
 /* Condicionamos siempre la opcion posible de que las str esten vacias (es decir sean "NULL") */
 
