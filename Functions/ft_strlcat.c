@@ -6,18 +6,13 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 14:17:02 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/21 19:39:54 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/06/29 18:19:52 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Lo que hacemos es poner todas las condiciones que entren dentro de nuestra limitaciones, es decir,
-en la primera parte lo que estamos haciendo es delimitar que en el caso de que nuestro dstsize sea igual a 0
-nos devuelva si o si la longitud de nuestro source. Y asi con todas las condiciones, si fuera mas corto que
-la actual longitud de nuestro dest etc. */
-
-int	ft_strlcat(char *dest, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t	destlen;
 	size_t	srclen;
@@ -29,12 +24,12 @@ int	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	if (dstsize == 0)
 		return (srclen);
 	if (dstsize < destlen)
-		return (destlen + srclen);
+		return (srclen + dstsize);
 	else
 	{
 		while (src[a] && (destlen + 1) < dstsize)
 		{
-			dest[destlen + a] = src [a];
+			dest[destlen + a] = src[a];
 			a++;
 		}
 		if ((destlen + a) == dstsize && destlen < dstsize)
@@ -45,12 +40,10 @@ int	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	return (destlen + srclen);
 }
 
-/* int	main()
+/* int	main(void)
 {
-	char *str = "Habla chucho";
-	char *str2 = "que no te escucho";
-	int	i;
-
-	i = 0;
-	printf("%d", ft_strlcat(str, str2, i));
+	char	str1[] = "hoasdgfasdfasdfga";
+	char	str2[] = "caracoli";
+	printf("%zu", ft_strlcat(str1, str2, 15));
+	return (0);
 } */

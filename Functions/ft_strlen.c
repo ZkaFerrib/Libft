@@ -6,22 +6,20 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:31:31 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/21 19:41:39 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/06/29 17:58:15 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
-	int	a;
+	size_t	length;
 
-	a = 0;
-	while (str[a] != '\0')
-	{
-		a++;
-	}
-	return (a);
+	length = 0;
+	while (s[length])
+			length++;
+	return (length);
 }
 
 /* int	main(void)
