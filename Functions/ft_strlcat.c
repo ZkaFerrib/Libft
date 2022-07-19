@@ -6,7 +6,7 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 14:17:02 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/29 18:19:52 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:50:37 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 		return (srclen + dstsize);
 	else
 	{
-		while (src[a] && (destlen + 1) < dstsize)
+		while (src[a] && (destlen + a) < dstsize)
 		{
 			dest[destlen + a] = src[a];
 			a++;
@@ -39,11 +39,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	}
 	return (destlen + srclen);
 }
-
-/* int	main(void)
-{
-	char	str1[] = "hoasdgfasdfasdfga";
-	char	str2[] = "caracoli";
-	printf("%zu", ft_strlcat(str1, str2, 15));
-	return (0);
-} */

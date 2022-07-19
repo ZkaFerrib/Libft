@@ -1,40 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 13:56:43 by gafernan          #+#    #+#             */
-/*   Updated: 2022/07/19 14:11:24 by gafernan         ###   ########.fr       */
+/*   Created: 2022/07/19 14:13:04 by gafernan          #+#    #+#             */
+/*   Updated: 2022/07/19 16:23:34 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_check(char c, const char *set)
 {
-	int	sign;
 	int	i;
-	int	num;
 
-	sign = 1;
 	i = 0;
-	num = 0;
-	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (set[i] != '\0')
 	{
-		if (str[i] == '-')
-			sign = -sign;
-		i++;
-	}	
-	while (str[i])
-	{
-		if (str[i] < 48 || str[i] > 57)
-			break ;
-		num = num * 10 + (str[i] - 48);
+		if (set[i] == c)
+			return (1);
 		i++;
 	}
-	return (num * sign);
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		i;
+	int		j;
+	char	*result;
+
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		if (ft_check(s1[i], set) != 1)
+			break ;
+		i++;
+	}
+	j = ft_strlen(s1);
+	while (j--)
+	{
+		if (ft_check(s1[j], set) != 1)
+			break ;
+	}
+	result = ft_substr(s1, i, (j - i) + 1);
+	return (result);
 }

@@ -6,35 +6,24 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 16:01:03 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/21 19:41:45 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:55:36 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *str1, char *str2, size_t t)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	a;
+	size_t	i;
 
-	a = 0;
-	if (t == 0)
+	i = 0;
+	if (n == 0)
 		return (0);
-	while ((str1[a] || str2[a]) && a < (t - 1))
+	while ((s1[i] || s2[i]) && i < (n - 1))
 	{
-		if (str1[a] != str2[a])
-			return ((unsigned int)str1[a] - (unsigned int)str2[a]);
-		a++;
+		if (s1[i] != s2[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
 	}
-	return ((unsigned int)str1[a] - (unsigned int)str2[a]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
-
-/* int main(void)
-{
-	char	src1[] = "Hablareh";
-	char	src2[] = "Hablareg";
-	unsigned int a;
-
-	a = 10;
-	printf("%d", ft_strncmp(src1, src2, a));
-	return (0);
-} */

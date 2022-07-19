@@ -1,23 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 12:01:53 by gafernan          #+#    #+#             */
-/*   Updated: 2022/07/19 13:50:12 by gafernan         ###   ########.fr       */
+/*   Created: 2022/07/19 14:25:57 by gafernan          #+#    #+#             */
+/*   Updated: 2022/07/19 14:26:36 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
-{
-	unsigned char	*aux;
-
-	aux = b;
-	while (len--)
-		*aux++ = c;
-	return (b);
-}
+void ft_putchar_fd(char c, int fd)

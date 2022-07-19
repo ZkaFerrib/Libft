@@ -6,15 +6,13 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 15:57:39 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/21 19:41:10 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/07/19 13:39:58 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Condicionamos siempre la opcion posible de que las str esten vacias (es decir sean "NULL") */
-
-int	ft_strlcpy(char *dest, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
 	size_t	res;
 	size_t	a;
@@ -22,9 +20,7 @@ int	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	a = 0;
 	res = 0;
 	while (src[res])
-	{
-		res++;
-	}
+			res++;
 	if (src == NULL || dest == NULL)
 		return (0);
 	if (dstsize != 0)
