@@ -6,7 +6,7 @@
 #    By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/29 16:10:35 by gafernan          #+#    #+#              #
-#    Updated: 2022/07/19 16:17:13 by gafernan         ###   ########.fr        #
+#    Updated: 2022/07/20 15:22:42 by gafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,10 @@ SRC = ft_isalpha.c			\
 	  ft_strdup.c			\
 	  ft_substr.c			\
 	  ft_strtrim.c			\
+	  ft_itoa.c				\
+	  ft_memset.c			\
+	  ft_memchr.c			\
+	  ft_strmapi.c
 
 INCLUDES = libft.h
 

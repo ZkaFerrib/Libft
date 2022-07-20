@@ -6,7 +6,7 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 13:06:19 by gafernan          #+#    #+#             */
-/*   Updated: 2022/06/21 19:38:58 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/07/20 15:05:17 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-/* int	main(void)
-{
-	int	a;
-
-	a = 'g';
-	printf("%d",ft_isalpha(a));
-} */

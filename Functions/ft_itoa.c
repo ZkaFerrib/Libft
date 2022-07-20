@@ -6,37 +6,51 @@
 /*   By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 14:22:15 by gafernan          #+#    #+#             */
-/*   Updated: 2022/07/19 16:47:00 by gafernan         ###   ########.fr       */
+/*   Updated: 2022/07/20 14:58:54 by gafernan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_fillstr( char *str, long num, int neg, int len)
+int	ft_len(int n)
 {
-	if (num == 0)
-		str[0] =
+	int	len;
+
+	len = 0;
+	if (n <= 0)
+		len++;
+	while (n)
+	{
+		len++;
+		n = n / 10;
+	}
+	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	long	num;
 	int		len;
-	int		neg;
-	char	*str;
+	char	*p;
+	long	nbr;
 
-	num = n;
-	neg = 0;
-	len = 0;
-	if (num < 0)
+	len = ft_len(n);
+	nbr = n;
+	p = malloc(sizeof(char) * (len + 1));
+	if (p == NULL)
+		return (NULL);
+	if (nbr < 0)
 	{
-		n = n / 10;
-		len++;
+		p[0] = '-';
+		nbr = -nbr;
 	}
-	if (num == 0)
-		len = 1;
-		str = (char *)malloc(sizeof(char) * (len + neg + 1));
-		if (str == NULL)
-			return (NULL);
-		return (ft_fillstr(str, num, neg, len));
-}	
+	if (nbr == 0)
+		p[0] = '0';
+		p[len--] = '\0';
+	while (nbr)
+	{
+		p[len] = nbr % 10 + '0';
+		len--;
+		nbr = nbr / 10;
+	}
+	return (p);
+}
