@@ -6,7 +6,7 @@
 #    By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/29 16:10:35 by gafernan          #+#    #+#              #
-#    Updated: 2022/07/20 15:22:42 by gafernan         ###   ########.fr        #
+#    Updated: 2022/07/20 16:33:54 by gafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,46 +27,46 @@ SRC = ft_isalpha.c			\
 	  ft_atoi.c				\
 	  ft_strchr.c			\
 	  ft_strrchr.c			\
+	  ft_memset.c			\
 	  ft_bzero.c			\
+	  ft_memchr.c			\
 	  ft_memcmp.c			\
 	  ft_memcpy.c			\
 	  ft_memmove.c			\
 	  ft_calloc.c			\
 	  ft_strdup.c			\
 	  ft_substr.c			\
+	  ft_strjoin.c			\
 	  ft_strtrim.c			\
 	  ft_itoa.c				\
-	  ft_memset.c			\
-	  ft_memchr.c			\
-	  ft_strmapi.c
+	  ft_strmapi.c			\
+	  ft_striteri.c
 
 INCLUDES = libft.h
 
 OBJ = $(SRC:.c=.o)
 
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
-
 CC = gcc
-AR = ar -crs
-FLAGS = -Wall -Wextra -Werror
+AR = ar rc
+CFLAGS = -Wall -Wextra -Werror
 RM = /bin/rm -f
 
 all: $(NAME)
 
 $(NAME) : $(OBJ) $(INCLUDES)
-	$(AR) $(NAME) $(OBJ)
+	@$(AR) $(NAME) $(OBJ)
+	@echo "library created"
 
-bonus: $(OBJ) $(OBJ_BONUS) $(INCLUDES)
-	$(AR) $(NAME) $(OBJ) $(OBJ_BONUS)
-
-%.o : %.c
-	$(CC) $(FLAGS) -c $(SRC) $(SRC_BONUS)
+$(OBJ) : $(SRC)
+	@$(CC) $(CFLAGS) -c $(SRC)
 
 clean:
-	$(RM) $(OBJ) $(OBJ_BONUS)
+	@$(RM) $(OBJ) $(BONUS_OBJS)
+	@echo "objs deleted"
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "executable deleted"
 
 re: fclean all
 
