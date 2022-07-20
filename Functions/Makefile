@@ -6,7 +6,7 @@
 #    By: gafernan <gafernan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/29 16:10:35 by gafernan          #+#    #+#              #
-#    Updated: 2022/07/20 16:33:54 by gafernan         ###   ########.fr        #
+#    Updated: 2022/07/20 17:06:41 by gafernan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,11 @@ SRC = ft_isalpha.c			\
 	  ft_strtrim.c			\
 	  ft_itoa.c				\
 	  ft_strmapi.c			\
-	  ft_striteri.c
+	  ft_striteri.c			\
+	  ft_putchar_fd.c		\
+	  ft_putnbr_fd.c		\
+	  ft_putendl_fd.c		\
+	  ft_putstr_fd.c		\
 
 INCLUDES = libft.h
 
